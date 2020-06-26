@@ -1,15 +1,20 @@
-img {
-    position: absolute;
-    z-index: 0;
-    animation-name: pop;
-    animation-duration: 3000ms;
-    animation-iteration-count: infinite;
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .container {
     display: flex;
     justify-content: center;
     padding-top: 25%;
+}
+
+img {
+    position: absolute;
+    z-index: 0;
+    animation-name: pop;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
 }
 
 .bubbles {
@@ -20,16 +25,11 @@ img {
     margin-top: 0;
     height: 100%;
     z-index: -1;
-    background: rgb(63, 94, 251);
-    background: radial-gradient(
-        circle,
-        rgba(63, 94, 251, 1) 0%,
-        rgba(252, 70, 107, 1) 100%
-    );
+    background: #3f5efb;
+    background: radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
-
 .bubbles li {
     position: absolute;
     list-style: none;
@@ -42,6 +42,8 @@ img {
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
 }
+
+/*# sourceMappingURL=style.css.map */
 
 .bubbles li:nth-child(1) {
     width: 40px;
@@ -120,9 +122,4 @@ img {
     100% {
         transform: scale(0.7);
     }
-}
-
-body {
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
