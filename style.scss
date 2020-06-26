@@ -1,0 +1,58 @@
+//Base sizes
+$width: 100px;
+$hieght: 100px;
+$left: 100%;
+$bubbles: 6; // Number of Bubbles
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+}
+
+img {
+    position: absolute;
+    z-index: 0;
+    animation-name: pop;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+}
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    height: 100%;
+    z-index: -1;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        border-radius: 100%;
+        background-color: rgba(242, 19, 208, 0.968);
+        bottom: -100px;
+        -webkit-animation: square 20s infinite;
+        animation: square 20s infinite;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+    }
+
+    // @for $i from 1 through $li:nth-child($i) {
+    // }
+}
